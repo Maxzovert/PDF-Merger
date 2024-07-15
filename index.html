@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <title>PDF-X</title>
+
+  </head>
+  <body>
+
+<!-- NAVBAR -->
+<header>
+  <nav>
+    <ul>
+      <a href="about.html"><li>ABOUT</li></a>
+      <a href="index.html"><li class="logo">P D F - <span class="lx">X</span></li></a>
+      <a href="#"><li>CONTACT</li></a>
+    </ul>
+  </nav>
+  <div class="line"></div>
+</header>
+
+
+<!-- FORM -->
+<div class="maincon">
+    <div class="container">
+      <h1 class="con-h1" >PDF-<span class="x">x</span></h1>
+      <p>Here you can merge your <span class="pdfx">PDF</span>🗂️</p>
+      <form id="mergeForm"  action="/merge" method="post" enctype="multipart/form-data">
+        <div class="form-items">
+          <label class="label1" for="exampleFormControlFile1">SELECT PDF</label>
+          <input type="file"  name="pdfs"  class="form-control-file" id="exampleFormControlFile1" multiple accept=".PDF">
+          <input class="button" type="submit" value="submit">
+        </div>
+      </form>
+    <div class="up-text">
+      <h1>Click <span class="up-textspan">submit</span> and wait Untill download button appers</h1>
+    </div>
+      <!-- downloadButton -->
+      <div class="btn-text" id="downloadLink" style="display: none;">
+        <a id="downloadButton" class="button" href="#" download>Download PDF</a>
+      </div>
+      <div class="scroll">
+        <p>scroll down 🔽</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="line2"></div>
+  
+<div class="logo-con">
+  <h1>Built With 💗</h1>
+  <div class="logo-con-images">
+    <img src="/static/html.png" alt="HTML Logo">
+    <img src="/static/CSS.png" alt="CSS Logo">
+    <img src="/static/JS.png" alt="JavaScript Logo">
+    <img src="/static/MSPS.png" alt="PowerShell Logo">
+  </div>
+</div>
+
+<div class="line2"></div>
+
+<footer>
+  <div class="thank">
+    <h1>THANK YOU</h1>
+  </div>
+  <div class="for-use">
+    <h1>FOR USING</h1>
+</footer>
+  
+  
+
+</div>
+
+  <!-- DOWNLOAD btton js -->
+
+  <script>
+    document.getElementById('mergeForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+  
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData
+        });
+  
+        if (response.ok) {
+          const data = await response.json();
+          const downloadLink = document.getElementById('downloadLink');
+          const downloadButton = document.getElementById('downloadButton');
+  
+          downloadButton.href = data;
+          
+          downloadLink.style.display = 'block';
+        } else {
+          console.error('Failed to merge PDFs:', response.statusText);
+          alert('Failed to merge PDFs. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error merging PDFs:', error);
+        alert('An error occurred while merging PDFs.');
+      }
+    });
+
+
+  </script>
+  </body>
+</html>

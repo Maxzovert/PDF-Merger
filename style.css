@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+ul a li .lx {
+    color: red;
+}
+
+li {
+    padding: 0 10vw;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+.line {
+    background: rgb(148, 143, 143);
+    height: 1vh;
+}
+
+.maincon {
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+    height: 80vh;
+    width: 98vw;
+}
+
+.container {
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.container h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+}
+
+.container h1 .x {
+    color: red;
+}
+
+.container p {
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.container p .pdfx {
+    color: red;
+}
+
+
+form {
+    margin: 10px 0;
+}
+
+.form-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.label1 {
+    font-family: "Abel", sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-control-file input {
+    font-family: "Abel", sans-serif;
+}
+
+.form-control-file {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #acacac;
+    color: white;
+}
+
+.button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.btn-text{
+    font-family: "Abel", sans-serif;
+    display: inline-block;
+    margin: 20px 1px;
+}
+.up-text h1{
+    font-family: "Abel", sans-serif;
+    font-size: 20px;
+}
+.up-textspan{
+    color: red;
+}
+/* .line2{
+    background: black;
+    height: 0.5vh;
+} */
+
+  .scroll {
+    position: absolute;
+    bottom: 10px;
+    right: -100px;
+    padding: 5px;
+  }
+  
+  .scroll p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+.logo-con{
+    border-top: 1px solid rgb(221, 220, 220);
+    border-bottom: none;
+    box-shadow: 0 -8px 8px rgba(255, 161, 161, 0.987);
+}
+
+.logo-con:hover{
+    border-top: none;
+    box-shadow: 0 8px 8px rgba(255, 161, 161, 0.987);
+    border-bottom: 1px solid rgb(221, 220, 220);
+}
+
+.logo-con h1{
+    text-align: center;
+}
+
+.logo-con-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .logo-con-images img {
+    width: 100px;
+    height: 100px; 
+    object-fit: contain;
+    margin: 25px 41px;
+  }
+
+.logo-con h1{
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px; 
+}
+
+footer{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-around;
+    height: 27vh;
+    width: 98vw;
+}
+footer .thank , .for-use{
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    opacity: 75%;
+}
+footer .for-use{
+    margin-right: 20px;
+}
